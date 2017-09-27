@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0" name="viewport" />
+    <title>信用分</title>
+    <style>
+        *{padding: 0 ;margin: 0;}
+        html,body,div{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" ></canvas>
+<script src="//static.360buyimg.com/finance/mobile/base/1.0.0/js/lib/??zepto-1.1.4.js,fastclick.js"></script>
+
+<script src="./createProgress.js"></script>
+<script>
+    var instance = new percentCircle("myCanvas",{
+        colorArr:["#ff0000","#fe0000"],  //颜色值必须是两个，可以为相同颜色，也可以是渐变的两个色值
+        colorBg:'transparent', //半圆背景色 默认#ffffff
+        linewidth:30,   //半圆的宽度
+        r:120,
+        startPoint:Math.PI*0.8, //开始角度，开始角度不同，半圆的大小不同，默认为  Math.PI*0.7;
+        targetPersent:1,  //进度（0-1）
+        point:{             //进度条末端的点
+            show:true,       //是否显示
+            color:'#ffffff'     //颜色
+        }
+    });
+    instance.execAnimation();  //动画开始
+</script>
+</body>
+</html>
