@@ -74,8 +74,4 @@ draw animated circular progress bar
     });
     instance.execAnimation();  //动画开始
 
-作者：somnustd
 
-链接：https://github.com/somnustd
-
-著作权归作者所有
